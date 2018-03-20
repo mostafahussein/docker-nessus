@@ -14,7 +14,7 @@ nessus :
 		exit 255 ; \
 	fi
 
-	docker run -d --name nessus-licensed -p $(NESSUS_PORT):8834 --mac-address $(UNIQUE_MAC) --volumes-from nessus-unlicensed-data nessus:licensed
+	docker run -d --name nessus-licensed --restart always -p $(NESSUS_PORT):8834 --mac-address $(UNIQUE_MAC) --volumes-from nessus-unlicensed-data nessus:licensed
 	@echo "Nessus is running at https://127.0.0.1:$(NESSUS_PORT)"
 
 stop : 
