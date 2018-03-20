@@ -1,7 +1,7 @@
 # http://tenable.com
 # https://index.docker.io/_/centos/
 FROM centos:latest
-ENV NESSUS_VERSION="7.0.2"
+ENV NESSUS_VERSION="7.0.3"
 
 # https://github.com/sometheycallme
 MAINTAINER Tim Kropp <timkropp77@gmail.com>
